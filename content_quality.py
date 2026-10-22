@@ -4,16 +4,24 @@ import re
 
 def grounded_interview(report, history):
     """Keep explicit proposals from being credited as demonstrated experience."""
+    hypothetical=re.compile(r"\b(?:would|could|propos\w*|hypothetical|not (?:recorded|performed|past|actual))\b|\bI['’]d\s+(?:use|try|implement)",re.I)
+    def clauses(value):
+        # Preserve exact spans while separating a real action from a future
+        # action in the same sentence: "I built X, but I would use Y."
+        return [part.strip() for part in re.split(r'(?<=[.!?;])\s+|\n|\s+(?=(?:and|but)\s+(?:(?:I|we)\s+)?(?:would|could|plan\b))|,\s*(?=(?:I|we)\s+(?:would|could))',value) if part.strip()]
     proposals=[]
+    real_words=set()
     for turn in history:
         if turn['role']!='user':
             continue
-        answer=turn['content']
-        if re.search(r'\b(?:would|could|propos\w*|hypothetical|not (?:recorded|performed|past|actual))\b',answer,re.I):
-            proposals.append(answer)
+        for span in clauses(turn['content']):
+            if hypothetical.search(span):
+                proposals.append(span)
+            else:
+                real_words.update(re.findall(r'\b[a-z]{5,}\b',span.lower()))
     if not proposals:
         return report
-    words=set(re.findall(r'\b[a-z]{5,}\b',' '.join(proposals).lower()))-{'about','would','could','which','their','there','these','those','rather','experience','recorded','proposed','actually','details'}
+    words=set(re.findall(r'\b[a-z]{5,}\b',' '.join(proposals).lower()))-real_words-{'about','would','could','which','their','there','these','those','rather','experience','recorded','proposed','actually','details','tests','testing','project','method','approach'}
     def qualify(value):
         sentences=re.split(r'(?<=[.!?])\s+',value)
         result=[]
@@ -29,9 +37,8 @@ def grounded_interview(report, history):
     for key in ('strengths','improvements','next_steps'):
         report[key]=list(dict.fromkeys(qualify(value) for value in report[key]))
     evidence=[]
-    for answer in proposals[:3]:
-        span=next((part.strip() for part in re.split(r'(?<=[.!?])\s+|\n',answer) if re.search(r'\bwould\b|\bpropos\w*\b|\bhypothetical\b',part,re.I)),answer)
-        evidence.append({'status':'proposed_or_mixed; past execution not established','source_quote':span})
+    for span in proposals[:3]:
+        evidence.append({'status':'proposed; past execution not established for this span','source_quote':span})
         quote=span if len(span)<=400 else span[:397].rsplit(' ',1)[0]+'…'
         report['strengths'].append('Proposed method (not credited as past experience): "'+quote+'"')
     report['proposal_evidence']=evidence

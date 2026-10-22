@@ -35,6 +35,22 @@ class LatestAuditTests(unittest.TestCase):
         report={'strengths':['Implemented pairing in a recorded coaching session.']}
         self.assertEqual(grounded_interview(report.copy(),[{'role':'user','content':'I implemented pairing in a coaching session.'}]),report)
 
+    def test_mixed_answer_preserves_playwright_and_qualifies_only_wiremock(self):
+        for separator in ('. ', '; ', ', but ', ' and '):
+            answer='I built Playwright tests for our release pipeline'+separator+'I would use WireMock in a future project.'
+            real='Demonstrated experience building Playwright tests for the release pipeline.'
+            proposed='Demonstrated experience using WireMock in a project.'
+            report={'score':70,'summary':real+' '+proposed,'score_explanation':real,
+                    'strengths':[real,proposed],'improvements':['Explain measurable outcomes.'],'next_steps':['Practise one example.']}
+            with self.subTest(separator=separator):
+                result=grounded_interview(report,[{'role':'user','content':answer}])
+                self.assertIn(real,result['summary'])
+                self.assertIn(real,result['strengths'])
+                self.assertEqual(result['score_explanation'],real)
+                self.assertNotIn(proposed,str(result))
+                self.assertTrue(all('Playwright' not in item['source_quote'] for item in result['proposal_evidence']))
+                self.assertTrue(any('WireMock' in item['source_quote'] for item in result['proposal_evidence']))
+
     def test_partial_backend_performance_evidence_is_carried_to_gaps(self):
         cv='Built a K6 framework for frontend applications and backend services for performance benchmarking.'
         report={'score':70,'summary':'No backend experience.','matched_skills':[], 'missing_skills':[{'skill':'Backend/API test automation','reason':'No explicit backend evidence','priority':'high'},{'skill':'Java/Kotlin','reason':'Not evidenced','priority':'high'}],'improvements':[]}
