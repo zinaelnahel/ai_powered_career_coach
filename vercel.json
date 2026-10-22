@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm ci && npm run build",
+  "functions": {
+    "app.py": {
+      "maxDuration": 90,
+      "excludeFiles": "{.vendor/**,.venv/**,.tools/**,node_modules/**,frontend/**,tests/**,artifacts/**,__pycache__/**,.env,.env.*}",
+      "includeFiles": "company_identities.json"
+    }
+  },
+  "headers": [
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

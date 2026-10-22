@@ -1,0 +1,11 @@
+.vendor
+.venv
+.env
+.env.*
+__pycache__
+tests
+artifacts
+*.pyc
+.git
+.tools
+node_modules

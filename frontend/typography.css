@@ -1,0 +1,45 @@
+:root {
+  --serif: 'Roboto', sans-serif;
+  --bs-body-font-family: 'Roboto', sans-serif;
+  --bs-font-sans-serif: 'Roboto', sans-serif;
+}
+body, button, input, textarea, select, .history-score small {
+  font-family: 'Roboto', sans-serif;
+}
+.brand {
+  font-size: 19px;
+  letter-spacing: -.6px;
+  gap: 10px;
+  line-height: 1.1;
+  white-space: normal;
+}
+.brand-name {
+  max-width: 140px;
+}
+.brand-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+.brand-icon img { display: block; width: 44px; height: 44px; }
+.brand-name { font-weight: 800; letter-spacing: -.5px; }
+.brand-dot {
+  display: none;
+}
+.footer-brand {
+  font-size: 15px;
+  letter-spacing: -.3px;
+}
+@media (max-width: 800px) {
+  .brand { font-size: 22px; }
+  .brand-name { max-width: none; }
+}
+@media (max-width: 580px) {
+  .brand { font-size: 20px; }
+  .brand-name { max-width: 245px; }
+}

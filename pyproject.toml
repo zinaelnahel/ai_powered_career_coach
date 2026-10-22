@@ -1,0 +1,14 @@
+[project]
+name = "career-dojo"
+version = "1.0.0"
+description = "AI career practice: interviews, CV review, job research and learning plans"
+requires-python = ">=3.12"
+dependencies = [
+  "Flask>=3.1,<4",
+  "pypdf>=6.1,<7",
+  "python-docx>=1.2,<2",
+  "waitress>=3.0.2,<4",
+]
+
+[tool.vercel]
+entrypoint = "app:app"

@@ -1,0 +1,93 @@
+/* Readability and input targets are shared across every dojo feature. */
+.dojo-theme{--muted:#58634F;font-size:16px;line-height:1.6}
+.dojo-theme :is(p,li){font-size:14px;line-height:1.75}
+.dojo-theme :is(button,.btn,a,summary){min-height:44px}
+.dojo-theme :is(button,.btn){min-width:44px;white-space:normal}
+.dojo-theme :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea){font-size:16px;min-height:44px}
+.dojo-theme :is(input[type=checkbox],input[type=radio]){width:20px;height:20px;flex-shrink:0;vertical-align:middle}
+.dojo-theme label:has(input[type=checkbox]),.dojo-theme label:has(input[type=radio]){display:flex;align-items:center;gap:10px;min-height:44px;line-height:1.5}
+.dojo-theme :is(button,a,input,textarea,select,summary):focus-visible{outline:3px solid #2B658B;outline-offset:3px;box-shadow:0 0 0 5px #FFFCF2}
+.dojo-theme .sidebar :is(button,a):focus-visible{outline-color:#F8D597;box-shadow:0 0 0 5px #183C33}
+.skip-link{position:fixed;left:16px;top:12px;z-index:1000;padding:12px 18px;background:#FFF8E5;color:#173F33;border:2px solid #173F33;border-radius:6px;font-size:16px;font-weight:700;transform:translateY(-180%);text-decoration:underline}
+.skip-link:focus{transform:translateY(0)}
+#main-content:focus{outline:none}
+.dojo-theme :is(.dojo-kicker,.eyebrow,.dojo-room-guide,.dojo-room-number,.dojo-heading-note,.dojo-edition-label,.dojo-progress-note,.dojo-room-footer>small,.dojo-belt-name,.dojo-card-label,.dojo-belt-card>p,.dojo-point-count span,.dojo-pizza-copy p,.dojo-pizza-copy .dojo-kicker,.dojo-pizza-status>small,.dojo-pizza-status>strong>span,.dojo-badge>small,.dojo-badge,.dojo-mission-count,.dojo-mission p,.journey-footnote,.journey-history-heading p,.subtitle,.privacy-copy,.memory-kicker,.memory-controls>p,.lab-muted){color:#58634F}
+.dojo-theme .dojo-hero-copy p{color:#DFE8D5;font-size:14px;line-height:1.7}
+.dojo-theme :is(.dojo-hero-label,.dojo-hero-footnote){color:#D8E3CC;font-size:12px;line-height:1.6}
+.dojo-theme .dojo-hero-label{flex-wrap:wrap;letter-spacing:.8px}
+.dojo-theme .dojo-hero-footnote{max-width:290px}
+.dojo-theme .dojo-hero-copy{padding-bottom:28px}
+.dojo-theme .dojo-welcome{min-height:390px}
+.dojo-theme .dojo-mentor-name{font-size:12px;letter-spacing:.6px;color:#F7DCAC}
+.dojo-theme .dojo-mentor-name>span{font-size:12px;letter-spacing:0;color:#DBE5D1}
+.dojo-theme .dojo-room-guide{font-size:12px;letter-spacing:.45px;line-height:1.6}
+.dojo-theme .dojo-room-footer>button{font-size:14px;gap:10px}
+.dojo-theme .dojo-room-footer>button>span{flex-shrink:0}
+.dojo-theme .dojo-room>p{font-size:14px}
+.dojo-theme :is(.dojo-inline-link,.about-link,.dojo-progress-note>button){font-size:14px;line-height:1.6;display:inline-flex;align-items:center;gap:8px;color:#2C553A}
+.dojo-theme .dojo-point-count{flex-wrap:wrap;justify-content:center}
+.dojo-theme .dojo-badge>strong{font-size:12px;line-height:1.5;color:#58634F}
+.dojo-theme .dojo-badge>small{font-size:12px;line-height:1.5}
+.dojo-theme .dojo-badge.earned>small{color:#3F6546}
+.dojo-theme .dojo-count{font-size:12px;color:#495C3D}
+.dojo-theme .dojo-pizza-copy p{font-size:14px}
+.dojo-theme .dojo-pizza-status{max-width:210px}
+.dojo-theme .dojo-pizza-status>small{font-size:12px;line-height:1.5}
+.dojo-theme .dojo-mission h3{font-size:14px;line-height:1.5}
+.dojo-theme .dojo-mission p{font-size:14px}
+.dojo-theme .dojo-mission .dojo-inline-link{font-size:14px}
+.dojo-theme .dojo-mission.done h3{color:#3D6343}
+.dojo-theme .dojo-section-heading{align-items:center}
+.dojo-theme .mode-bar{font-size:12px;line-height:1.6}
+.dojo-theme .mode-toggle{font-size:12px}
+.dojo-theme :is(.mode-bar,#connection){color:#536449}
+.dojo-theme header{font-size:12px;height:auto;min-height:68px;padding-block:12px;gap:16px}
+.dojo-theme .header-right{font-size:12px}
+.dojo-theme .sidebar .nav{font-size:14px;min-height:48px}
+.dojo-theme .sidebar-about{font-size:14px;color:#CFDDCA;padding:8px 0}
+.dojo-theme .sidebar-note p{font-size:14px;color:#CEDCC6}
+.dojo-theme .profile small{font-size:12px;color:#CEDCC6}
+.dojo-theme .profile strong{font-size:14px}
+.dojo-theme .workspace-label{color:#C1D1BD}
+.dojo-theme .brand-name small{font-size:12px;letter-spacing:.7px;color:#C1D1BD}
+.dojo-theme .sidebar{scrollbar-gutter:stable}
+.dojo-theme .panel .history-score{color:#345B3F}
+.dojo-theme .history-row p{color:#58634F;font-size:14px}
+.dojo-theme :is(.memory-empty p,.report-card li,.report-hero p,.tip-panel p,.tip-panel li,.tip-panel small){color:#53624B}
+.dojo-theme footer{color:#58634F;font-size:12px;line-height:1.7;flex-wrap:wrap}
+.dojo-theme footer small{color:#58634F;font-size:12px}
+.dojo-theme .footer-brand{color:#345B3F}
+.dojo-theme .journey-tabs>button{font-size:14px;color:#53624B}
+.dojo-theme .journey-settings-link{font-size:14px;color:#3F5D34}
+.dojo-theme summary{display:flex;align-items:center;cursor:pointer}
+.dojo-theme summary::before{content:'+';margin-right:10px;font-size:20px}
+.dojo-theme details[open]>summary::before{content:'−'}
+.dojo-theme .dojo-badge-grid{gap:15px}
+@media(max-width:1150px){.dojo-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}.dojo-theme .dojo-room{padding:20px 18px 0}.dojo-theme .dojo-hero-copy h2{font-size:29px}.dojo-theme .dojo-hero-copy{width:67%}.dojo-theme .dojo-top-grid{grid-template-columns:minmax(0,1.65fr) minmax(235px,1fr)}.dojo-theme .dojo-mission{flex-wrap:wrap}.dojo-theme .dojo-mission-count{margin-left:auto}.dojo-theme .dojo-heading-note{max-width:180px;line-height:1.6}}
+@media(max-width:800px){.dojo-theme .sidebar nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;overflow:visible}.dojo-theme .sidebar .nav{font-size:14px;width:100%;white-space:normal;padding:10px}.dojo-theme .sidebar-about{font-size:14px}.dojo-theme .dojo-top-grid{grid-template-columns:1fr}.dojo-theme .dojo-hero-copy{width:58%;padding:28px}.dojo-theme .dojo-mentor-scene{width:43%}.dojo-theme .dojo-mentor{width:300px;height:292px;right:-20px}.dojo-theme .dojo-belt-card{max-width:none}.dojo-theme .dojo-pizza-card{flex-wrap:wrap}.dojo-theme .dojo-pizza-status{margin-left:0;text-align:left}.dojo-theme .dojo-badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dojo-theme .dojo-badge>small{max-width:140px;margin-inline:auto}}
+@media(max-width:580px){.dojo-theme .sidebar nav{grid-template-columns:repeat(2,minmax(0,1fr))}.dojo-theme .sidebar .nav{font-size:14px;gap:9px}.dojo-theme .brand-name small{font-size:12px}.dojo-theme main{padding-inline:18px}.dojo-theme .mode-bar{flex-wrap:wrap;gap:8px}.dojo-theme header{padding-inline:18px}.dojo-theme .header-right{flex-shrink:0}.dojo-theme .dojo-kicker{font-size:12px;letter-spacing:.7px}.dojo-theme .dojo-page-heading p{font-size:14px}.dojo-theme .dojo-welcome{padding-bottom:220px;min-height:0}.dojo-theme .dojo-hero-copy{width:100%;padding:24px}.dojo-theme .dojo-hero-copy p{max-width:none;font-size:14px}.dojo-theme .dojo-hero-copy p br{display:none}.dojo-theme .dojo-hero-copy h2{font-size:32px}.dojo-theme .dojo-hero-footnote{max-width:none}.dojo-theme .dojo-mentor-scene{width:100%;height:220px;top:auto;bottom:0}.dojo-theme .dojo-mentor{height:230px;width:236px;right:calc(50% - 118px);bottom:-15px}.dojo-theme .dojo-sun{width:190px;height:190px;right:calc(50% - 95px);top:15px}.dojo-theme .dojo-window{height:220px;right:calc(50% - 95px);top:0}.dojo-theme .dojo-mentor-name{right:14px;bottom:15px}.dojo-theme .dojo-belt-card{text-align:left}.dojo-theme .dojo-point-count{justify-content:flex-start}.dojo-theme .dojo-rooms{grid-template-columns:1fr}.dojo-theme .dojo-room h3{max-width:none;font-size:22px}.dojo-theme .dojo-room-guide{font-size:12px}.dojo-theme .dojo-room-number{font-size:14px}.dojo-theme .dojo-room{min-height:0;padding:20px 20px 0}.dojo-theme .dojo-room>p{font-size:14px}.dojo-theme .dojo-room-footer>small{font-size:12px}.dojo-theme .dojo-pizza-card{grid-template-columns:70px minmax(0,1fr)}.dojo-theme .dojo-pizza-copy .dojo-kicker{font-size:12px;line-height:1.6;letter-spacing:.4px}.dojo-theme .dojo-pizza-copy p{font-size:14px}.dojo-theme .dojo-pizza-copy h2{font-size:20px}.dojo-theme .dojo-pizza-status .dojo-inline-link{font-size:14px}.dojo-theme .dojo-count{font-size:12px}.dojo-theme .dojo-mission h3{font-size:14px}.dojo-theme .dojo-mission p{font-size:14px;max-width:none}.dojo-theme .dojo-mission .dojo-inline-link{font-size:14px}.dojo-theme .dojo-progress-note{font-size:12px}.dojo-theme .journey-tabs>button{font-size:12px;overflow-wrap:anywhere}.dojo-theme .journey-history-heading p{font-size:14px}.dojo-theme .journey-footnote{font-size:12px}.dojo-theme .dojo-mission{align-items:flex-start}.dojo-theme .dojo-mission>div{flex:1;min-width:145px}.dojo-theme .about-feature>p,.dojo-theme .about-page .panel>p,.dojo-theme .about-steps p{font-size:14px}.dojo-theme .report-actions{flex-direction:column}.dojo-theme .history-row{align-items:flex-start}.dojo-theme .history-row>.d-flex{width:100%}.dojo-theme .memory-actions{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.dojo-theme *,.dojo-theme *::before,.dojo-theme *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Explicit overrides for feature-level legacy colors with higher specificity. */
+.dojo-theme header,.dojo-theme .header-right{color:#53624B}
+.dojo-theme .dojo-page-heading p,.dojo-theme .dojo-room>p{color:#58634F}
+.dojo-theme .dojo-page-heading h1>span{color:#916A32}
+.dojo-theme .panel-heading p,.dojo-theme .panel small,.dojo-theme .panel label>span,.dojo-theme .form-label small,.dojo-theme label small,.dojo-theme .upload-zone strong,.dojo-theme .upload-zone small,.dojo-theme .or-line,.dojo-theme #cv-count,.dojo-theme .empty-state p{color:#53624B}
+.dojo-theme .tip-panel .spark,.dojo-theme .empty-state .spark{color:#46754A}
+.dojo-theme .lab-welcome p,.dojo-theme .lab-discover p,.dojo-theme .lab-intro p{color:#53624B}
+.dojo-theme .lab-welcome-sticker{color:#654B77}
+.dojo-theme .sidebar .nav:hover{color:#E2EBD8}
+
+.dojo-theme .memory-empty-art>span{color:#5E4826}
+
+.dojo-theme .sidebar .nav{color:#D0DECB}
+.dojo-theme .pill.pale{color:#3E6549;background:#E5EDDF}
+.dojo-theme .text-button{color:#365A41}
+.dojo-theme .demo-badge{color:#6D531C;background:#FFF1D3}
+.dojo-theme .score small{color:#53624B}
+.dojo-theme :is(input,textarea)::placeholder{color:#65725D;opacity:1}
+.dojo-theme .career-lab :is(p,li,blockquote,label,small,.lab-kicker,.lab-score>span,.lab-score small,.lab-muted,.lab-result-summary,.lab-job p){color:#53624B}
+.dojo-theme .career-lab .btn.primary{color:#FFFFFF;background:#254E40}
+.dojo-theme .career-lab .demo-badge{color:#6D531C;background:#FFF1D3}
+
+.dojo-theme .saving-status{border:0;background:none;padding:5px 8px;color:#3D5D3D;font-size:14px;min-height:44px;line-height:1.5;text-decoration:underline}.dojo-theme .data-use-note{display:flex;align-items:center;gap:18px;padding:12px 16px;margin:-8px 0 24px;background:#E9EEDE;border:1px solid #CBD6BF;border-radius:7px}.dojo-theme .data-use-note p{font-size:14px;color:#465A3E;line-height:1.65;margin:0;flex:1}.dojo-theme .data-use-note button{background:none;border:0;color:#325539;font-size:14px;text-decoration:underline;flex-shrink:0}.dojo-theme .assessment-coverage{border:1px solid #D8D5C5;background:#F0EFDF;padding:16px 20px;margin:0 0 18px;border-radius:7px;color:#3F5337}.dojo-theme .assessment-coverage.partial{border-color:#CFB176;background:#FCF0D7}.dojo-theme .assessment-coverage strong{font-size:18px;line-height:1.5}.dojo-theme .assessment-coverage p{font-size:14px;color:#574D33;margin:7px 0 0}.dojo-theme .score-explanation h3{font-size:20px;line-height:1.4;margin:0 0 12px}.dojo-theme .score-explanation p{font-size:14px;color:#53624B;line-height:1.8;white-space:pre-wrap}.dojo-theme .score-explanation small{font-size:12px;color:#53624B}@media(max-width:580px){.dojo-theme .data-use-note{flex-direction:column;align-items:flex-start;gap:5px;padding:14px}.dojo-theme .header-right{flex-shrink:1}.dojo-theme .saving-status{font-size:12px;text-align:right}.dojo-theme .assessment-coverage strong{font-size:17px}}

@@ -1,0 +1,14 @@
+.env
+.venv/
+.vendor/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+.tools/
+.vercel/
+
+.vercel
+
+# Local QA outputs and generated documents
+artifacts/
