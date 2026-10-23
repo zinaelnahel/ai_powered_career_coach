@@ -2,7 +2,7 @@
 
 An AI career-practice project by **Zina El Nahel**. Built with React, Bootstrap and Flask, with a Ninja Turtles-inspired dojo theme.
 
-[Open the app](https://ai-powered-career-coach-dojo.vercel.app) ? [LinkedIn](https://www.linkedin.com/in/zina-el-nahel) ? [Implementation walkthrough](APP_WALKTHROUGH.md)
+[Open the app](https://ai-powered-career-coach-dojo.vercel.app) | [LinkedIn](https://www.linkedin.com/in/zina-el-nahel) | [Implementation walkthrough](APP_WALKTHROUGH.md)
 
 ## What it does
 
