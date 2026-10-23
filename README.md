@@ -55,9 +55,9 @@ For frontend development, run `npm run dev` alongside Flask. Restart Flask after
 
 `static/index.html` loads the esbuild output in `public/static`. There is no account database or agent framework.
 
-## Evidence, privacy and limits
+## Privacy and limitations
 
-Privacy and limitations: Live analysis sends submitted text to OpenAI. Saved work is browser-specific and is removed when browser data is cleared. Job results require source links and location evidence; work authorization is not assessed. Scores are subjective guidance, not hiring predictions. Upload and testing limitations apply.
+Live analysis sends submitted text to OpenAI. Saved work is browser-specific and is removed when browser data is cleared. Job results require source links and location evidence; work authorization is not assessed. Scores are subjective guidance, not hiring predictions. Upload and testing limitations apply.
 
 ## Verify changes
 
