@@ -1,6 +1,6 @@
 # Career Dojo
 
-An AI career-practice graduation project by **Zina El Nahel**. Built with React, Bootstrap and Flask, with a Ninja Turtles-inspired dojo theme.
+An AI career-practice project by **Zina El Nahel**. Built with React, Bootstrap and Flask, with a Ninja Turtles-inspired dojo theme.
 
 [Open the app](https://ai-powered-career-coach-dojo.vercel.app) ? [LinkedIn](https://www.linkedin.com/in/zina-el-nahel) ? [Implementation walkthrough](APP_WALKTHROUGH.md)
 
@@ -57,14 +57,7 @@ For frontend development, run `npm run dev` alongside Flask. Restart Flask after
 
 ## Evidence, privacy and limits
 
-- Jobs require retrieved URLs and supported workplace geography. Remote alone is insufficient; personal work authorization is not assessed. A larger search pool does not guarantee more verified openings.
-- Job-to-fit carries a source extract and link, with a required completeness check. Edited inputs hide old fit scores; downloads retain the original analyzed snapshot.
-- K6 load/performance evidence is partial coverage, not automatic proof of functional API testing. Proposed interview methods stay hypothetical. These guards are targeted checks, not verification of every generated claim.
-- Plans keep short weeks to one small exercise with setup limits and an unexecuted-design fallback. Resources follow the objective. Company-policy applicability is qualified; blocked culture pages are disclosed and navigation labels are excluded from values.
-- Uploads are processed in server memory: up to 4 MB, PDFs up to 20 pages, extracted CV text up to 30,000 characters. Scanned PDFs need pasted text; there is no OCR.
-- Saving is browser/device-specific. Shared history and tab-specific workspaces are coordinated across tabs. Clearing browser data removes saved work; downloaded copies remain until deleted.
-- Live analysis sends submitted text to OpenAI. Job/company web research does not include the CV. Dictation may use the browser's speech service; the Flask backend does not receive audio.
-- Scores are subjective practice guidance, not hiring predictions. Real-device, microphone, assistive-technology and comprehensive security testing remain separate work.
+Privacy and limitations: Live analysis sends submitted text to OpenAI. Saved work is browser-specific and is removed when browser data is cleared. Job results require source links and location evidence; work authorization is not assessed. Scores are subjective guidance, not hiring predictions. Upload and testing limitations apply.
 
 ## Verify changes
 
