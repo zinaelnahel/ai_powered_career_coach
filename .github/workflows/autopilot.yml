@@ -1,0 +1,25 @@
+name: CareerDojo Autopilot discovery
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */4 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: careerdojo-autopilot
+  cancel-in-progress: false
+jobs:
+  discover:
+    if: github.repository_visibility == 'public' && vars.AUTOPILOT_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s autopilot/tests
+      - run: python -m autopilot.discovery
+        env:
+          AUTOPILOT_CONFIG: ${{ secrets.AUTOPILOT_CONFIG }}
+      # No public artifacts or applicant data in logs.
